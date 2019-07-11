@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cherry</title>
+    <link rel="stylesheet" href="/Styles/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="main-header">
+            <div class="wrapper">
+                <div class="site-header">
+                    <div class="site-logo">
+                        <a href="#" class="image">
+                            <img src="/assets/Logo.jpg" alt="logo">
+                        </a>
+                        <p class="text">
+                            get cherry
+                        </p>
+                    </div>
+                    <nav class="site-navigation">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Registration</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <article class="main-article">
+            <div class="wrapper">
+                <section class="site-section">
+                    <ul>
+                        <li class="site-section-inner">
+                            <p class="imges">
+                                <img src="/assets/Van.jpg" alt="van">
+                            </p>
+                            <p class="header">
+                                <h2>Ван</h2>
+                            </p>
+                            <p class="description">
+                                Сорт късни тъмно червени череши с къса дръжка. Концентрирано сладки.
+                            </p>
+                        </li>
+                        <li class="site-section-inner">
+                            <p class="imges">
+                                <img src="/assets/Napoleon.jpg" alt="napolon">
+                            </p>
+                            <p class="header">
+                                <h2>Наполеон</h2>
+                            </p>
+                            <p class="description">
+                                Сорт късни розови череши. Сладко - кисели на вкус. Отлични за компот и сладко.
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="primary-btn"><a href="#">Запази череши за<span>Юни 2020</span></a></p>
+                    <!-- book your cherries for<span>June 2020</span> -->
+                </section>
+            </div>
+        </article>
+        <footer class="main-footer">
+            <div class="wrapper">
+                <div class="site-footer">
+                    <p>All rights reserved from 2019 &copy;</p>
+                </div>
+            </div>
+        </footer>
+        <section>
+            <div class="wrapper">
+                <ul>
+                    {% for page in site.pages %}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis quam earum laudantium eligendi, ducimus nesciunt numquam esse, voluptatem repellat exercitationem, laboriosam recusandae natus animi sunt. Ex repudiandae veniam nostrum.</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
