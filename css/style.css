@@ -198,6 +198,12 @@ border-color: blueviolet;
     /* color: blueviolet; */
     text-transform: uppercase;
 }
+.pages ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0 15rem;
+}
 
 @media (max-width:724px) {
     .site-section ul {
