@@ -100,15 +100,6 @@ html {
 
 /* site-section */
 
-.site-section.login, .site-section.registration, .site-section.about, .site-section.pages {
-    padding: 5em 0 10em 0;
-}
-
-.site-section.pages ul {
-    display: block;
-    list-style-type: disc;
-}
-
 .site-section {
     width: 100%;
     margin: 0 auto;
@@ -180,11 +171,10 @@ html {
     border: 3px solid blueviolet;
     border-radius: 0.5em;
 }
-
 .site-section .primary-btn a:hover {
-    background: #FFF;
-    color: blueviolet;
-    border-color: blueviolet;
+background: #FFF;
+color: blueviolet;
+border-color: blueviolet;
 }
 
 .site-section .primary-btn a span {
@@ -208,13 +198,12 @@ html {
     /* color: blueviolet; */
     text-transform: uppercase;
 }
-
-/* .pages ul {
+.pages ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     padding: 0 15rem;
-} */
+}
 
 @media (max-width:724px) {
     .site-section ul {
