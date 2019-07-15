@@ -1,0 +1,23 @@
+---
+layout: main
+title: Pages
+permalink: /pages1/
+---
+<article class="main-article">
+    <div class="wrapper">
+        <section class="site-section pages">
+            <section class="pages">
+                <h1>All Pages</h1>
+                <ul>
+                    {% for page in site.pages %}
+                    {% if page.title %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </section>
+        </section>
+    </div>
+</article>
