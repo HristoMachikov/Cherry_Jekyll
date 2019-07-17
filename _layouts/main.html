@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cherry</title>
     <script src="https://kit.fontawesome.com/ff2f9140ef.js"></script>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/login.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 
 </head>
 
@@ -36,10 +35,17 @@
                 </div>
             </div>
         </header>
-        {{ content }}
+
+        <main class="main-article">
+            <div class="wrapper">
+                <section class="site-section{% if page.title %} {{ page.title | slugify }}{% endif %}">
+                    {{ content }}
+                </section>
+            </div>
+        </main>
+
         <footer class="main-footer">
             <div class="wrapper">
-            
                 <div class="site-footer">
                     <p>All rights reserved from 2019 &copy;</p>
                 </div>

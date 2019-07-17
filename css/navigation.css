@@ -1,0 +1,28 @@
+.site-header .site-navigation {
+    /* margin-left: auto; */
+    display: flex;
+}
+
+.site-navigation ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* margin: 0 auto; */
+    /* justify-content: center; */
+}
+
+.site-navigation ul li {
+    /* list-style: none; */
+    display: flex;
+    padding-left: 1.5em;
+    flex-grow: 1;
+}
+
+.site-navigation ul li a {
+    text-decoration: none;
+    color: blueviolet;
+    text-transform: uppercase;
+    display: flex;
+    padding: 0.5em 0;
+}

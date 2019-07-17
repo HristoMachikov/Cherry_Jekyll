@@ -1,0 +1,43 @@
+.site-header .image {
+    display: block;
+    width: 65px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.3em;
+}
+
+.site-header .image img:before {
+    display: block;
+    content: '';
+    padding-top: 66.67%;
+}
+
+.site-header .image img {
+    width: 200%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.site-logo {
+    position: relative;
+    /* margin: 0.5em 0; */
+}
+
+.site-header .text {
+    font-family: 'PT Sans Narrow';
+    /* text-align: center; */
+    font-size: 18px;
+    color: blueviolet;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    line-height: 1;
+    pointer-events: none;
+}
