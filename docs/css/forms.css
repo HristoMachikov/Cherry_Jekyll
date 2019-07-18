@@ -11,8 +11,7 @@
 }
 
 .main-form fieldset legend {
-    padding: 0.5rem;
-    padding-right: 5rem;
+    padding: 0.5rem 2.5rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -29,22 +28,19 @@
 .main-form label {
     font-weight: bold;
     padding: 0.25em 0.25em 0.25em 0;
-}
-
-.main-form input[type=text], .main-form input[type=password] {
-    padding: 0.5em;
-    border-radius: 0.3rem;
-    border: 1px solid #CCC;
-    outline: none;
+    flex: 1 1;
+    text-align: right;
 }
 
 .main-form .username, .main-form .password {
     display: flex;
-    flex-shrink: 1;
-    align-items: stretch;
+    align-items: center;
     margin-top: 1rem;
+    justify-items: end;
 }
-
+.main-form fieldset p.username{
+    margin-top: 3rem;
+}
 .main-form .username span:before, .main-form .password span:before {
     display: block;
     content: '';
@@ -63,17 +59,20 @@
 }
 
 .main-form .username input, .main-form .password input {
-    min-width: auto;
-    flex-grow: 1;
-
+    padding: 0.5em;
+    border-radius: 0.3rem;
+    border: 1px solid #CCC;
+    flex: 0 1 420px;
+    outline: none;
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 .main-form input[type=submit] {
-    padding: 0.5em 1em;;
-    margin: 1rem 0;
+    display: block;
+    padding: 0.5em 1em;
+    margin: 1rem auto;
     background: blueviolet;
     color: #FFF;
     border: none;
