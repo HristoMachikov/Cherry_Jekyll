@@ -30,6 +30,9 @@
     padding: 0.25em 0.25em 0.25em 0;
     flex: 1 1;
     text-align: right;
+    position: absolute;
+    top: -2em;
+    left: 0;
 }
 
 .main-form .username, .main-form .password {
@@ -37,6 +40,7 @@
     align-items: center;
     margin-top: 1rem;
     justify-items: end;
+    position: relative;
 }
 .main-form fieldset p.username{
     margin-top: 3rem;
@@ -62,22 +66,19 @@
     padding: 0.5em;
     border-radius: 0.3rem;
     border: 1px solid #CCC;
-    flex: 0 1 420px;
-    outline: none;
+    flex: 1 1;
+    outline: 0;
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    box-shadow: none;
 }
 
-.main-form input[type=submit] {
+.main-form .primary-btn {
     display: block;
-    padding: 0.5em 1em;
     margin: 1rem auto;
-    background: blueviolet;
-    color: #FFF;
-    border: none;
-    border-radius: 0.5em;
-    font-weight: bold;
+    padding: 0.5em 2em;
+    /* font-weight: bold; */
 }
 
 .main-form .username span:before, .main-form .password span:before {
