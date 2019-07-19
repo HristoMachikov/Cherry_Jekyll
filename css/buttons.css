@@ -1,0 +1,14 @@
+.primary-btn {
+    color: var( --color-primary-core-site);
+    background: var(--color-primary-site);
+    padding: 0.5em 1em;
+    border: 1px solid var(--color-primary-site);
+    border-radius: 0.5em;
+    outline: none;
+}
+
+.primary-btn:hover, .primary-btn:focus{
+    background: var( --color-primary-core-site);
+    color: var(--color-primary-site);
+    border-color: var(--color-primary-site);
+}
