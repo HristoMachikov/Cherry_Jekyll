@@ -30,12 +30,14 @@
     margin-top: var( --spacing-layout-elements, 2em);
 }
 
+.site-header {
+    display: flex;
+    align-items: center;
+}
+.site-header nav {
+    margin-left: auto;
+}
+
 @media (min-width: 830px) {
-    .site-header {
-        display: flex;
-        /* align-items: center; */
-    }
-    .site-header nav {
-        margin-left: auto;
-    }
+ 
 }

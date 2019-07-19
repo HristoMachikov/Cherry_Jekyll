@@ -15,7 +15,8 @@
     <div class="main">
         <header class="main-header">
             <div class="wrapper">
-                <div class="site-header login">
+                <input type="checkbox" name="toggle" id="toggle" class="toggle-nav">
+                <div class="site-header">
                     <div class="site-logo">
                         <a href="{{ site.baseurl }}/" class="image">
                             <img src="{{ site.baseurl }}/assets/Logo.jpg" alt="logo">
@@ -24,14 +25,11 @@
                             get cherry
                         </p>
                     </div>
-                    <nav class="site-navigation">
-                        <ul>
-                            <li><a href="{{ site.baseurl }}/about">About</a></li>
-                            <li><a href="{{ site.baseurl }}/pages/">Pages</a></li>
-                            <li><a href="{{ site.baseurl }}/login/">Login</a></li>
-                            <li><a href="{{ site.baseurl }}/registration">Registration</a></li>
-                        </ul>
-                    </nav>
+                    <label for="toggle" class="toggle-nav-btn">
+                        <span class="menu">Menu</span>
+                    </label>
+                    {% include navigation.html %}
+
                 </div>
             </div>
         </header>
