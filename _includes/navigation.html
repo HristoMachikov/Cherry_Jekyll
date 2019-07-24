@@ -1,8 +1,14 @@
 <nav class="site-navigation">
     <ul>
-        <li><a href="{{ site.baseurl }}/about">About</a></li>
-        <li><a href="{{ site.baseurl }}/pages/">Pages</a></li>
-        <li><a href="{{ site.baseurl }}/login/">Login</a></li>
-        <li><a href="{{ site.baseurl }}/registration">Registration</a></li>
+        {% assign nav = site.pages | sort:'order' %}
+        {% for item in nav %}
+            {% if item.order %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ item.url }}"{% if page.title==item.title %} class="selected"{% endif %}>
+                        {{ item.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
     </ul>
 </nav>

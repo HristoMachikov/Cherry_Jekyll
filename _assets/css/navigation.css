@@ -14,15 +14,20 @@
 
 .site-navigation ul li a {
     text-decoration: none;
-    color: blueviolet;
+    color: var(--color-primary-site);
     text-transform: uppercase;
     padding: 0.5em 1em;
-    border: 1px solid transparent;
+    /* outline: none; */
+    border: 1px solid var(--color-main-site);
 }
 
 .site-navigation ul li a:hover {
-    border-color: blueviolet;
+    border-color: var(--color-primary-site);
     border-radius: 0.5em;
+}
+
+.site-navigation ul li a.selected {
+    font-weight: bold;
 }
 
 .toggle-nav {
@@ -42,17 +47,16 @@
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
     padding-right: 0.5em;
+    color: var(--color-primary-site);
 }
 
 /* ---MQ Header--- */
 
-/* Phone amd Tablet */
+/* Phone and Tablet */
 
 @media (min-width: 830px) {
     .site-navigation ul {
         display: flex;
-        /* margin: 0 auto; */
-        /* justify-content: center; */
     }
     .site-navigation ul li {
         /* list-style: none; */
@@ -79,12 +83,9 @@
     }
     .site-header .toggle-nav-btn {
         display: inline-block;
-        flex: 1 0 0;
+        /* flex: 1 0 0; */
         text-align: right;
         margin-left: auto;
-    }
-    .site-navigation ul li:not(:last-child) {
-        /* margin-bottom: 0.75em; */
     }
     .main-header {
         position: relative;
@@ -92,38 +93,26 @@
     .toggle-nav:checked+.site-header .site-navigation {
         display: block;
         flex-basis: 100%;
-        /* border: 1px solid #000; */
         text-align: right;
         position: absolute;
         top: 100%;
         left: 100%;
         transform: translateX(calc(-100% - var(--spacing-layout-elements)));
         z-index: 2;
-        /* background: #FFF; */
     }
     .toggle-nav:checked+.site-header .site-navigation li {
         text-align: center;
         margin: 0.25em 0;
     }
-    .site-navigation li a {
+    .site-navigation ul li a {
         display: block;
-        background: #FFF;
+        background: var(--color-primary-core-site);
         border-radius: 0.5em;
         border: 1px solid var(--color-primary-site);
     }
     .site-navigation li a:hover {
         background: var(--color-primary-site);
-        color: #FFF;
+        color: var(--color-primary-core-site);
         border-color: var(--color-primary-site);
-    }
-    /* .site-nav ul:before, .site-nav ul:after {
-        display: block;
-        content: '';
-        border: 1px solid #000;
-        width: 100%;
-    } */
-    .menu:before:hover, .toggle-nav-btn:hover .menu {
-        text-decoration: underline;
-        color: purple;
     }
 }

@@ -5,7 +5,7 @@
     justify-content: start;
 }
 .main-header,.main-footer {
-    background: greenyellow;
+    background: var(--color-main-site);
 }
 .main .main-footer {
     margin-top: auto;
