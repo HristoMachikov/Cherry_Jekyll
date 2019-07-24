@@ -1,0 +1,71 @@
+.site-header .menu:before {
+    transition: transform 0.5s ease-in;
+}
+
+.toggle-nav-btn:hover .menu:before {
+    transform: scale(2);
+}
+
+.toggle-nav:checked+.site-header .site-navigation li {
+    -webkit-animation: slidIn 0.7s linear;
+            animation: slidIn 0.7s linear;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(1)  {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(2)  {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(3)  {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(4)  {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(5)  {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(6)  {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+}
+
+.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(7)  {
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+}
+
+@-webkit-keyframes slidIn {
+    from {
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidIn {
+    from {
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
