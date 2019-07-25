@@ -3,7 +3,7 @@
 }
 
 .toggle-nav-btn:hover .menu:before {
-    transform: scale(2);
+    transform: scale(1.5);
 }
 
 .toggle-nav:checked+.site-header .site-navigation li {

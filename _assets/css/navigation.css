@@ -48,6 +48,7 @@
     font-weight: 900;
     padding-right: 0.5em;
     color: var(--color-primary-site);
+    font-size: 2em;
 }
 
 /* ---MQ Header--- */
