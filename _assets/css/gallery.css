@@ -14,6 +14,7 @@ ul.gallery {
     grid-column: span 3;
     grid-row: span 2;
     /* border: 1px solid blueviolet; */
+   
 }
 
 .gallery li:before {
@@ -38,9 +39,11 @@ ul.gallery {
     left: 0;
     right: 0;
     bottom: 0;
+    transition: transform 1s linear;
 }
 
 .gallery figure {
+    position: relative;
     /* display: block; */
     /* padding: 1em; */
 }
@@ -78,3 +81,85 @@ ul.gallery {
         grid-template-columns: repeat(6, 1fr);
     }
 }
+
+.gallery li input {
+    
+    position: absolute;
+    pointer-events:none;
+    display: none;
+}
+
+.gallery li label span:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.5);
+    
+    cursor: pointer;  
+}
+
+/* .gallery li label span:after {
+    display: none;
+    content: "";
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+} */
+
+.gallery li input:checked + a label span:before {
+    background: rgba(0,0,0,0);
+}
+/* .gallery li input:checked + a label span:after {
+   display: block;
+   content: "";
+   position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+} */
+.gallery li input:checked + a figcaption {
+    display: block;
+}
+
+.gallery li input:checked + a {
+    
+    position: fixed;
+    /* transform: translateY(50%); */
+    bottom: 50%;
+   
+    
+animation: showIn 1s linear;
+animation-fill-mode: both;
+    max-width: var(--layout-main-width);
+    height: auto;
+    margin: auto;
+    opacity: 1;
+    z-index: 1;
+    
+}
+
+.gallery li label span:hover:before {
+    opacity: 0;
+    background: rgba(0,0,0,0);
+}
+
+@keyframes showIn {
+    from{
+
+    }
+    to{
+        transform: translateY(50%);
+    }
+}
+
+/* body .main::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    display: none;
+} */
