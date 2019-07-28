@@ -8,13 +8,12 @@ ul.gallery {
 }
 
 .gallery li {
-    display: block;
+    display: none;
     position: relative;
     overflow: hidden;
     grid-column: span 3;
     grid-row: span 2;
     /* border: 1px solid blueviolet; */
-   
 }
 
 .gallery li:before {
@@ -43,9 +42,8 @@ ul.gallery {
 }
 
 .gallery figure {
+    width: 100%;
     position: relative;
-    /* display: block; */
-    /* padding: 1em; */
 }
 
 .gallery img {
@@ -64,14 +62,13 @@ ul.gallery {
 }
 
 .gallery figcaption {
-    display: none;
+    display: block;
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 2em;
     color: var(--color-primary-core-site);
-    transform: translateX(-50%);
     text-align: center;
-    width: 90%;
+    width: 100%;
+    padding: 0 2em;
 }
 
 .gallery li.portrait figcaption {}
@@ -83,9 +80,8 @@ ul.gallery {
 }
 
 .gallery li input {
-    
     position: absolute;
-    pointer-events:none;
+    pointer-events: none;
     display: none;
 }
 
@@ -93,10 +89,12 @@ ul.gallery {
     display: block;
     content: "";
     position: absolute;
-    top: 0;left: 0;right: 0;bottom: 0;
-    background: rgba(0,0,0,0.5);
-    
-    cursor: pointer;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 /* .gallery li label span:after {
@@ -108,62 +106,87 @@ ul.gallery {
     z-index: 10;
 } */
 
-.gallery li input:checked + a label span:before {
-    background: rgba(0,0,0,0);
-}
-/* .gallery li input:checked + a label span:after {
-   display: block;
-   content: "";
-   position: fixed;
-    top: 0;left: 0;right: 0;bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 10;
-} */
-.gallery li input:checked + a figcaption {
-    display: block;
+.gallery li input:checked+a label span:before {
+    opacity: 0;
+    /* background: rgba(0, 0, 0, 0); */
 }
 
-.gallery li input:checked + a {
-    
+/* .gallery li input:checked+a label:after {
+    display: block;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+} */
+
+.gallery li input:checked+a figcaption {
+    display: block;
+    /* opacity: 1; */
+    /* transform: translateX(0.5em); */
+    -webkit-animation: showText 0.5s linear 1s;
+            animation: showText 0.5s linear 1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    z-index: 11;
+}
+
+.gallery li input:checked+a {
     position: fixed;
     /* transform: translateY(50%); */
-    bottom: 50%;
-   
-    
--webkit-animation: showIn 1s linear;
-   
-    
-        animation: showIn 1s linear;
--webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
+    /* bottom: 50%; */
+    -webkit-animation: showIn 1s linear;
+            animation: showIn 1s linear;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
     max-width: var(--layout-main-width);
     height: auto;
-    margin: auto;
+    margin: 0 auto;
     opacity: 1;
     z-index: 1;
-    
 }
 
 .gallery li label span:hover:before {
     opacity: 0;
-    background: rgba(0,0,0,0);
+    /* background: rgba(0, 0, 0, 0); */
 }
 
 @-webkit-keyframes showIn {
-    from{
-
-    }
-    to{
-        transform: translateY(50%);
+    from {}
+    to {
+        transform: translateY(20%);
     }
 }
 
 @keyframes showIn {
-    from{
-
+    from {}
+    to {
+        transform: translateY(20%);
     }
-    to{
-        transform: translateY(50%);
+}
+
+@-webkit-keyframes showText {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
     }
 }
 
