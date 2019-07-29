@@ -48,3 +48,13 @@ exclude:
   - package.json
   - package-lock.json
 
+# defaults:
+#   - scope:
+#       path: "assets/img"
+#     values:
+#       image: true
+#   - scope:
+#       path: "assets/img/portrait"
+#     values:
+#       image: true 
+#       portrait: yes

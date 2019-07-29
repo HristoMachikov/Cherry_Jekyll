@@ -5,6 +5,29 @@ permalink: /gallery/
 order: 5
 ---
 
+<!-- <ul class="gallery">
+    {% assign image_files = site.static_files | where: "image", true %}
+    {% assign galleryAllText = site.pages | where: "galleryText", true %}
+    {% for galleryText in galleryAllText %}
+        {% for myimage in image_files %}
+
+        <li {% if myimage.portrait %}class="portrait"{% endif %}>
+            <input type="checkbox" name="{{ myimage.basename }}" id="{{ myimage.basename }}">
+            <a href="">
+                <figure>
+                    <img src="{{ site.baseurl }}{{ myimage.path }}" alt="{{ myimage.basename }}">
+                    <figcaption>
+                        galleryText.{{ myimage.path }}
+                    </figcaption>
+                    <label for="{{ myimage.basename }}"><span></span></label>
+                </figure>
+            </a>
+        </li>
+        
+        {% endfor %}
+    {% endfor %}
+</ul> -->
+
 <ul class="gallery">
     <li>
         <input type="checkbox" name="pink_1" id="pink_1">
