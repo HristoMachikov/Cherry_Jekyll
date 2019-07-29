@@ -8,7 +8,7 @@ ul.gallery {
 }
 
 .gallery li {
-    display: none;
+    display: block;
     position: relative;
     overflow: hidden;
     grid-column: span 3;
@@ -38,7 +38,7 @@ ul.gallery {
     left: 0;
     right: 0;
     bottom: 0;
-    transition: transform 1s linear;
+   /* animation */
 }
 
 .gallery figure {
@@ -62,9 +62,9 @@ ul.gallery {
 }
 
 .gallery figcaption {
-    display: block;
+    display: none;
     position: absolute;
-    bottom: 2em;
+    bottom: 1em;
     color: var(--color-primary-core-site);
     text-align: center;
     width: 100%;
@@ -97,21 +97,12 @@ ul.gallery {
     cursor: pointer;
 }
 
-/* .gallery li label span:after {
-    display: none;
-    content: "";
-    position: fixed;
-    top: 0;left: 0;right: 0;bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 10;
-} */
-
 .gallery li input:checked+a label span:before {
     opacity: 0;
-    /* background: rgba(0, 0, 0, 0); */
+   
 }
 
-/* .gallery li input:checked+a label:after {
+.gallery li input:checked+a:before {
     display: block;
     content: "";
     position: fixed;
@@ -119,83 +110,47 @@ ul.gallery {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 10;
-} */
+    cursor: default;
+    pointer-events: inherit;
+    
+}
+.gallery li input:checked+a label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background:linear-gradient(to top,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) ; */
+    z-index: 11;
+    cursor: pointer;
+}
 
 .gallery li input:checked+a figcaption {
     display: block;
-    /* opacity: 1; */
-    /* transform: translateX(0.5em); */
-    -webkit-animation: showText 0.5s linear 1s;
-            animation: showText 0.5s linear 1s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    z-index: 11;
+/* amination */
+    /* z-index: 12; */
 }
 
-.gallery li input:checked+a {
+.gallery li input:checked+a figure {
     position: fixed;
-    /* transform: translateY(50%); */
-    /* bottom: 50%; */
-    -webkit-animation: showIn 1s linear;
-            animation: showIn 1s linear;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    top: 0;left:50%;
+    transform: translateX(-50%);
     max-width: var(--layout-main-width);
-    height: auto;
-    margin: 0 auto;
+    max-height: 100vh;
     opacity: 1;
-    z-index: 1;
+    z-index: 11;
+    /* animation */
+}
+
+.gallery li input:checked+a img {
+    height: auto;
+    width: 100%;
 }
 
 .gallery li label span:hover:before {
     opacity: 0;
-    /* background: rgba(0, 0, 0, 0); */
 }
-
-@-webkit-keyframes showIn {
-    from {}
-    to {
-        transform: translateY(20%);
-    }
-}
-
-@keyframes showIn {
-    from {}
-    to {
-        transform: translateY(20%);
-    }
-}
-
-@-webkit-keyframes showText {
-    from {
-        opacity: 0;
-        transform: scale(1);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-}
-
-@keyframes showText {
-    from {
-        opacity: 0;
-        transform: scale(1);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-}
-
-/* body .main::before{
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;left: 0;right: 0;bottom: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 10;
-    display: none;
-} */
