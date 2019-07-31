@@ -52,22 +52,23 @@
 
 /* gallery */
 
-.gallery li>a {
-    transition: transform 1s linear;
-}
-
-.gallery li input:checked+a figcaption {
+.image-gallery input:checked+li img {
+    animation: showIn 1s linear;
+    animation-fill-mode: both;
+ }
+ 
+.image-gallery input:checked+li figcaption {
     animation: showText 0.5s linear 1s;
     animation-fill-mode: both;
 }
 
-.gallery li input:checked+a figure {
-    animation: showIn 1s linear;
-    animation-fill-mode: both;
-}
 
 @keyframes showIn {
-    from {}
+    from {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     to {
         top: 50%;
         transform: translate(-50%, -50%);

@@ -1,67 +1,45 @@
-ul.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
+ul.image-gallery {
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-gap: 5px;
     grid-auto-flow: dense;
 }
 
-.gallery li {
+.image-gallery li {
     display: block;
     position: relative;
     overflow: hidden;
     grid-column: span 3;
     grid-row: span 2;
-    /* border: 1px solid blueviolet; */
 }
 
-.gallery li:before {
+.image-gallery li:before {
     display: block;
     content: "";
     padding-top: 75%;
 }
-
-.gallery li.portrait {
-    grid-column: span 3;
-    grid-row: span 3;
-}
-
-.gallery li.portrait:before {
-    padding-top: 133.33%;
-}
-
-.gallery li>a {
+.image-gallery li figure {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-   /* animation */
 }
 
-.gallery figure {
-    width: 100%;
-    position: relative;
-}
-
-.gallery img {
+.image-gallery li img {
+    display: block;
     width: 100%;
     height: auto;
-    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
-.gallery li.portrait>a {
-    display: flex;
-}
-
-.gallery li.portrait img {
-    height: 100%;
-    width: auto;
-}
-
-.gallery figcaption {
+.image-gallery li figcaption {
     display: none;
     position: absolute;
     bottom: 1em;
@@ -70,22 +48,41 @@ ul.gallery {
     width: 100%;
     padding: 0 2em;
 }
+/* .image-gallery li label:after {
+    display: block;
+} */
 
-.gallery li.portrait figcaption {}
-
-@media (min-width: 500px) {
-    ul.gallery {
-        grid-template-columns: repeat(6, 1fr);
-    }
+.image-gallery li.portrait {
+    grid-column: span 3;
+    grid-row: span 4;
 }
 
-.gallery li input {
+.image-gallery li.portrait:before {
+    padding-top: 133.33%;
+}
+
+.image-gallery li.portrait img {
+    height: 100%;
+    width: auto;
+}
+
+@media (min-width: 500px) {
+    ul.image-gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .image-gallery input:checked+li.portrait img {
+        width: auto;
+        max-height: 100%;
+     }
+}
+
+.image-gallery input {
     position: absolute;
     pointer-events: none;
     display: none;
 }
 
-.gallery li label span:before {
+.image-gallery li label:before {
     display: block;
     content: "";
     position: absolute;
@@ -97,12 +94,11 @@ ul.gallery {
     cursor: pointer;
 }
 
-.gallery li input:checked+a label span:before {
+.image-gallery li label:hover:before {
     opacity: 0;
-   
 }
 
-.gallery li input:checked+a:before {
+.image-gallery input:checked+li:after {
     display: block;
     content: "";
     position: fixed;
@@ -112,45 +108,40 @@ ul.gallery {
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 10;
-    cursor: default;
-    pointer-events: inherit;
-    
-}
-.gallery li input:checked+a label:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background:linear-gradient(to top,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) ; */
-    z-index: 11;
-    cursor: pointer;
 }
 
-.gallery li input:checked+a figcaption {
-    display: block;
-/* amination */
-    /* z-index: 12; */
-}
-
-.gallery li input:checked+a figure {
+.image-gallery input:checked+li figure {
     position: fixed;
-    top: 0;left:50%;
-    transform: translateX(-50%);
-    max-width: var(--layout-main-width);
-    max-height: 100vh;
     opacity: 1;
     z-index: 11;
-    /* animation */
 }
 
-.gallery li input:checked+a img {
+
+.image-gallery input:checked+li img {
+    max-width: var(--layout-main-width);
     height: auto;
-    width: 100%;
+    /* amination */
+ }
+ .image-gallery input:checked+li.portrait img  {
+    max-width: 100vw;
+ }
+ /* .image-gallery input:checked+li label:before {
+     display: none;
+ }
+ .image-gallery input:checked+li label:after {
+    display: inline-block;
+    content: "X";
+   position: absolute;
+   left: 95%;
+    z-index: 12;
+    cursor: pointer;
+} */
+
+
+.image-gallery input:checked+li figcaption {
+    display: block;
+    /* amination */
+    z-index: 12;
 }
 
-.gallery li label span:hover:before {
-    opacity: 0;
-}
+
