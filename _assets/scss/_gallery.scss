@@ -65,8 +65,15 @@ ul.image-gallery {
     height: 100%;
     width: auto;
 }
+@media (min-width: 960px) {
 
-@media (min-width: 500px) {
+    .image-gallery input:checked+li img {
+        width: auto;
+        max-height: 100vh;
+     }
+}
+
+@media (min-width: 512px) {
     ul.image-gallery {
         grid-template-columns: repeat(6, 1fr);
     }
