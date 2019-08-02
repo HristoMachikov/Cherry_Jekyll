@@ -264,7 +264,7 @@ blockquote .author:before {
     display: flex;
     flex-grow: 1; }
   .site-navigation ul li:not(:first-child) {
-    padding-left: 0.5em; }
+    padding-left: 0.3em; }
   .site-navigation ul li a {
     display: flex; } }
 
