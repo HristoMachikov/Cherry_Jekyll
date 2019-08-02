@@ -5,6 +5,16 @@ ul.image-gallery {
     grid-template-columns: 1fr;
     grid-gap: 5px;
     grid-auto-flow: dense;
+
+
+    @include mq(tablet) {
+        grid-template-columns: repeat(6, 1fr);
+
+        input:checked+li.portrait img {
+            width: auto;
+            max-height: 100%;
+        }
+    }
 }
 
 .image-gallery li {
@@ -65,6 +75,7 @@ ul.image-gallery {
     height: 100%;
     width: auto;
 }
+
 @media (min-width: 960px) {
 
     .image-gallery input:checked+li img {
@@ -73,15 +84,7 @@ ul.image-gallery {
      }
 }
 
-@media (min-width: 512px) {
-    ul.image-gallery {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    .image-gallery input:checked+li.portrait img {
-        width: auto;
-        max-height: 100%;
-     }
-}
+
 
 .image-gallery input {
     position: absolute;

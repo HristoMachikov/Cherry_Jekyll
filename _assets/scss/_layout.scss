@@ -23,6 +23,7 @@
 .main-header {
     padding: calc(var( --spacing-layout-elements, 2em) / 4) 0;
     margin-bottom: var( --spacing-layout-elements, 2em);
+   position: relative;
 }
 
 .main-footer {
@@ -32,6 +33,7 @@
 
 .site-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 .site-header nav {

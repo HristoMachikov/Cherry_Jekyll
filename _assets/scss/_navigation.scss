@@ -30,67 +30,35 @@
     font-weight: bold;
 }
 
-.toggle-nav {
-    position: absolute;
-    opacity: 1;
-    /* display: none; */
-    pointer-events: none;
-}
 
-.site-header .toggle-nav-btn {
-    display: none;
-}
-
-.site-header .menu:before {
-    display: inline-block;
-    content: "\f0c9";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    padding-right: 0.5em;
-    color: var(--color-primary-site);
-    font-size: 2em;
-}
 
 /* ---MQ Header--- */
 
 /* Phone and Tablet */
 
-@media (min-width: 830px) {
+@media (min-width: 640px) {
     .site-navigation ul {
         display: flex;
     }
     .site-navigation ul li {
-        /* list-style: none; */
         display: flex;
-        padding-left: 1.5em;
         flex-grow: 1;
+    }
+    .site-navigation ul li:not(:first-child) {
+        padding-left: 0.5em;
     }
     .site-navigation ul li a {
         display: flex;
     }
+  
 }
-
-@media (max-width: 830px) {
-    .site-header {
-        flex-wrap: wrap;
-    }
-    .site-navigation {
-        /* display: block; */
-    }
+/*@media (max-width: 830px)*/
+@media (max-width: 639px) {
+ 
     .site-header nav.site-navigation {
-        /* margin-left: auto; */
-        display: none;
-        /* border: 1px solid #000; */
+        display: none;  
     }
-    .site-header .toggle-nav-btn {
-        display: inline-block;
-        /* flex: 1 0 0; */
-        text-align: right;
-        margin-left: auto;
-    }
-    .main-header {
-        position: relative;
-    }
+
     .toggle-nav:checked+.site-header .site-navigation {
         display: block;
         flex-basis: 100%;

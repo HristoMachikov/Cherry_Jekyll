@@ -6,59 +6,31 @@
 }
 
 html {
-    font-size: var(--font-size-root-normal, 14px);
-    font-family: 'PT Sans', sans-serif;
+    font-size: var(--font-size-phone, 14px);
+    font-family: 'PT Sans', Arial,  sans-serif;
     line-height: 1.5;
     box-sizing: border-box;
-}
 
-/* ---MQ Typography--- */
-
-/* Small Phone */
-
-@media (max-width: 500px) {
-    html {
-        font-size: 12px;
+    @include mq(phone-small) {
+        font-size: var(--font-size-phone-small, 12px);
     }
-}
-
-/* Phone */
-
-@media (min-width: 500px) {
-    html {
-        font-size: var(--font-size-root-normal, 14px);
+    @include mq(phone) {
+        font-size: var(--font-size-phone, 14px);
     }
-}
-
-/* Tablet */
-
-@media (min-width: 600px) {
-    html {
-        font-size: var(--font-size-root-large, 16px);
+    @include mq(tablet) {
+        font-size: var(--font-size-tablet, 16px);
     }
-}
-
-/* Laptop */
-
-@media (min-width: 830px) {
-    html {
-        font-size: var(--font-size-root-big, 18px);
+    @include mq(laptop) {
+        font-size: var(--font-size-laptop, 18px);
     }
-}
-
-/* Desktop */
-
-@media (min-width: 1300px) {
-    html {
-        font-size: var(--font-size-root-huge, 21px);
+    @include mq(desktop) {
+        font-size: var(--font-size-desktop, 21px);
     }
-}
-
-/* Large Desktop */
-
-@media (min-width: 1800px) {
-    html {
-        font-size: var(--font-size-root-enormous, 24px);;
+    @include mq(desktop-large) {
+        font-size: var(--font-size-desktop-large, 24px);
+    }
+    @include mq(desktop-huge) {
+        font-size: var(--font-size-desktop-huge, 27px);
     }
 }
 
@@ -92,32 +64,13 @@ body, table, form, select, option, input, textarea {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: 1em;
-    /* line-height: 1.2; */
     margin-bottom: 0.3em;
 }
 
-h1 {
-    font-size: 2.6em;
-}
-
-h2 {
-    font-size: 2.0em;
-}
-
-h3 {
-    font-size: 1.8em;
-}
-
-h4 {
-    font-size: 1.4em;
-}
-
-h5 {
-    font-size: 1.2em;
-}
-
-h6 {
-    font-size: 1em;
+@each $h, $size in (h1: 2.6em, h2: 2.0em, h3: 1.8em, h4: 1.4em, h5: 1.2em, h6: 1em){
+    #{$h} {
+        font-size: $size;
+    }
 }
 
 a {
