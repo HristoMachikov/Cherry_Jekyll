@@ -65,7 +65,7 @@
 .main-form .username input, .main-form .password input {
     padding: 0.5em;
     border-radius: 0.3rem;
-    border: 1px solid #CCC;
+    border: 1px solid var(--color-border-ligth);
     flex: 1 1;
     outline: 0;
     border-left: none;
@@ -84,8 +84,8 @@
 }
 
 .main-form .username span:before, .main-form .password span:before {
-    background-color: #FFF;
-    border: 1px solid #CCC;
+    background-color: var(--color-body-bgrd);
+    border: 1px solid var(--color-border-ligth);
     display: flex;
     align-items: center;
     padding: 0.5em;
@@ -105,15 +105,15 @@
 
 .main-form .username input:focus + span:before, .main-form .username input:hover + span:before,
 .main-form .password input:focus + span:before, .main-form .password input:hover + span:before {
-    border: 1px solid blueviolet;
-    color: blueviolet;
+    border: 1px solid var(--color-primary-site);
+    color: var(--color-primary-site);
     border-right: none;
     outline: none;
 }               
 
 .main-form .username input:focus, .main-form .username input:hover,
 .main-form .password input:focus, .main-form .password input:hover {
-    border: 1px solid blueviolet;
+    border: 1px solid var(--color-primary-site);
     border-left: none;
     outline: none;
 }

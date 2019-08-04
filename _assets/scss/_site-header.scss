@@ -32,7 +32,7 @@
     & .text {
         font-family: 'PT Sans Narrow', Arial, sans-serif;
         font-size: 18px;
-        color: blueviolet;
+        color: var(--color-primary-site);
         position: absolute;
         top: 0;
         left: 0;
@@ -41,7 +41,6 @@
         pointer-events: none;
     }
 
-    
     & .toggle-nav-btn {
         display: inline-block;
         text-align: right;
@@ -56,9 +55,14 @@
             content: '\f0c9';
             font-family: "Font Awesome 5 Pro";
             font-weight: 900;
-            padding-right: 0.5em;
+            padding: 0 0.25em;
             color: var(--color-primary-site);
             font-size: 2em;
+            border: 1px solid var(--color-border-defaut);
+            border-radius: 0.3em;
+        }
+        &:hover .menu:before {
+           border-color: var(--color-main-site);
         }
     }
 
