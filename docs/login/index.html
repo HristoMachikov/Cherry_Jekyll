@@ -42,9 +42,11 @@
             
         
             
+        
+            
                 <li>
                     <a href="/Cherry_Jekyll/about/">
-                        Инфо
+                        About
                     </a>
                 </li>
             
@@ -52,7 +54,7 @@
             
                 <li>
                     <a href="/Cherry_Jekyll/gallery/">
-                        Галеря
+                        Gallery
                     </a>
                 </li>
             
@@ -60,15 +62,7 @@
             
                 <li>
                     <a href="/Cherry_Jekyll/contacts/">
-                        Контакти
-                    </a>
-                </li>
-            
-        
-            
-                <li>
-                    <a href="/Cherry_Jekyll/registration/">
-                        Регистрация
+                        Contacts
                     </a>
                 </li>
             
@@ -76,7 +70,7 @@
             
                 <li>
                     <a href="/Cherry_Jekyll/login/" class="selected">
-                        Вход
+                        Login
                     </a>
                 </li>
             
@@ -90,22 +84,26 @@
 
         <main class="main-article">
             <div class="wrapper">
-                <section class="site-section вход">
+                <section class="site-section login">
                     <form action="#" class="main-form">
     <fieldset class="main-form-fieldsed">
         <legend>Login</legend>
         <p class="username">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <input class="form-input" type="text" name="username" id="username">
             <span></span>
         </p>
         <p class="password last">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input class="form-input" type="password" name="password" id="password">
             <span></span>
         </p>
-        <input class="primary-btn" type="submit" value="Login">
-        <p class="question">Did you have <a href="/Cherry_Jekyll/registration/">registration</a>?</p>
+        <p class="form-btn">
+            <a class="primary-btn" href="/Cherry_Jekyll">Login</a>
+            <!-- <input class="primary-btn" type="submit" value="Login"> -->
+        </p>
+        
+        <p class="question">Did you have <a href="/Cherry_Jekyll/registration/">Registration</a>?</p>
     </fieldset>
 </form>
                 </section>

@@ -1,8 +1,8 @@
 ---
 layout: main
-title: Вход
+title: Login
 permalink: /login/
-order: 5
+order: 4
 ---
 
 <form action="#" class="main-form">
@@ -10,15 +10,19 @@ order: 5
         <legend>Login</legend>
         <p class="username">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <input class="form-input" type="text" name="username" id="username">
             <span></span>
         </p>
         <p class="password last">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input class="form-input" type="password" name="password" id="password">
             <span></span>
         </p>
-        <input class="primary-btn" type="submit" value="Login">
-        <p class="question">Did you have <a href="{{ site.baseurl }}/registration/">registration</a>?</p>
+        <p class="form-btn">
+            <a class="primary-btn" href="{{ site.baseurl }}">Login</a>
+            <!-- <input class="primary-btn" type="submit" value="Login"> -->
+        </p>
+        
+        <p class="question">Did you have <a href="{{ site.baseurl }}/registration/">Registration</a>?</p>
     </fieldset>
 </form>

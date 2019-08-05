@@ -1,28 +1,31 @@
 ---
 layout: main
-title: Регистрация
+title: Registration
 permalink: /registration/
-order: 4
 ---
 <form action="#" class="main-form">
     <fieldset class="main-form-fieldsed">
         <legend>Registration</legend>
         <p class="username">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <input class="form-input" type="text" name="username" id="username">
             <span></span>
         </p>
         <p class="password">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input class="form-input" type="password" name="password" id="password">
             <span></span>
         </p>
         <p class="password last">
             <label for="password">Repeat Password</label>
-            <input type="password" name="password" id="password">
+            <input class="form-input" type="password" name="password" id="password">
             <span></span>
         </p>
-        <input class="primary-btn" type="submit" value="Registration">
-        <p class="question">If you have registration, you have to <a href="{{ site.baseurl }}/login/">login</a>!</p>
+        <p class="form-btn">
+            <a class="primary-btn" href="{{ site.baseurl }}">Registration</a>
+            <!-- <input class="primary-btn" type="submit" value="Registration"> -->
+        </p>
+        
+        <p class="question">If you have registration, you have to <a href="{{ site.baseurl }}/login/">Login</a>!</p>
     </fieldset>
 </form>

@@ -150,7 +150,8 @@ blockquote .author:before {
   .primary-btn:hover, .primary-btn:focus {
     background: var(--color-primary-core-site);
     color: var(--color-primary-site);
-    border-color: var(--color-primary-site); }
+    border-color: var(--color-primary-site);
+    cursor: pointer; }
 
 .site-header .image {
   display: block;
@@ -356,7 +357,7 @@ blockquote .author:before {
   text-align: center;
   padding: 1em 0; }
 
-.site-section .primary-btn {
+.site-section .btn .primary-btn {
   display: inline-block;
   /* text-decoration: none; */
   /* color: #FFF; */
@@ -393,80 +394,83 @@ blockquote .author:before {
   height: auto;
   margin: 0 auto;
   position: relative; }
-
-.main-form fieldset {
-  padding: 1rem;
-  background: #EEE; }
-
-.main-form fieldset legend {
-  padding: 0.5rem 2.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 2;
-  background: #EEE; }
-
-.main-form fieldset legend, .main-form fieldset {
-  border: 1px solid #AAA;
-  border-radius: 0.5em; }
-
-.main-form label {
-  font-weight: bold;
-  padding: 0.25em 0.25em 0.25em 0;
-  flex: 1 1;
-  text-align: right;
-  position: absolute;
-  top: -2em;
-  left: 0; }
-
-.main-form .username, .main-form .password {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  justify-items: end;
-  position: relative; }
-
-.main-form .main-form-fieldsed .password.last {
-  padding-bottom: 0; }
-
-.main-form fieldset p.username {
-  margin-top: 3rem; }
-
-.main-form .username span:before, .main-form .password span:before {
-  display: block;
-  content: '';
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 700;
-  color: black; }
-
-.main-form .username span:before {
-  content: '\f007'; }
-
-.main-form .password span:before {
-  content: '\f084'; }
-
-.main-form .username input, .main-form .password input {
-  padding: 0.5em;
-  border-radius: 0.3rem;
-  border: 1px solid var(--color-border-ligth);
-  flex: 1 1;
-  outline: 0;
-  border-left: none;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  box-shadow: none;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none; }
-
-.main-form .primary-btn {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.5em 2em;
-  background: var(--color-primary-site);
-  border-radius: 10px;
-  /* font-weight: bold; */ }
+  .main-form fieldset {
+    padding: 1rem;
+    background: #EEE;
+    border: 1px solid var(--color-border-defaut);
+    border-radius: 0.5em; }
+    .main-form fieldset legend {
+      padding: 0.5rem 2.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+      background: #EEE;
+      border: 1px solid var(--color-border-defaut);
+      border-radius: 0.5em; }
+  .main-form label {
+    font-weight: bold;
+    padding: 0.25em 0.25em 0.25em 0;
+    flex: 1 1;
+    text-align: right;
+    position: absolute;
+    top: -2em;
+    left: 0; }
+  .main-form .username {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    justify-items: end;
+    position: relative; }
+  .main-form .password {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    justify-items: end;
+    position: relative; }
+    .main-form .password.last {
+      padding-bottom: 0; }
+    .main-form .password span:before {
+      display: block;
+      content: '';
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 700;
+      content: '\f084';
+      color: black; }
+  .main-form .username {
+    margin-top: 3rem; }
+    .main-form .username span:before {
+      display: block;
+      content: '';
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 700;
+      content: '\f007';
+      color: black; }
+  .main-form .form-input {
+    padding: 0.5em;
+    border-radius: 0.3rem;
+    border: 1px solid var(--color-border-ligth);
+    flex: 1 1;
+    outline: 0;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+    -moz-appearance: none;
+         appearance: none;
+    -webkit-appearance: none; }
+  .main-form .form-btn {
+    padding-bottom: 0;
+    text-align: center; }
+    .main-form .form-btn .primary-btn {
+      display: inline-block;
+      margin: 1rem 0; }
+  .main-form .question {
+    text-align: center;
+    padding: 0; }
+    .main-form .question a:hover {
+      color: var(--color-link-hover); }
 
 .main-form .username span:before, .main-form .password span:before {
   background-color: var(--color-body-bgrd);
@@ -497,13 +501,6 @@ blockquote .author:before {
   border: 1px solid var(--color-primary-site);
   border-left: none;
   outline: none; }
-
-.main-form .question {
-  text-align: center;
-  padding: 0; }
-
-.main-form .question a:hover {
-  color: var(--color-link-hover); }
 
 .site-header .menu:before {
   transition: transform 0.5s ease-in; }
