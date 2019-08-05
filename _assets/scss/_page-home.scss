@@ -1,0 +1,114 @@
+
+/* .site-section.login, .site-section.registration, .site-section.about, .site-section.pages {
+    padding: 5em 0 10em 0;
+} */
+
+.site-section.contacts ul {
+    display: block;
+    list-style-type: disc;
+}
+
+.site-section.home {
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 0;
+
+        .site-section-inner {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 300px;
+            /* align-items: center; */
+            justify-content: stretch;
+            text-align: center;
+            margin: 1em auto;
+            border: 1px solid #AAA;
+            border-radius: 1em;
+            overflow: hidden;
+            background: #EEE;
+
+            p {
+                padding: 0;
+            }
+
+            .description {
+                padding-bottom: 1em;
+            }
+
+            .imges {
+                display: block;
+                overflow: hidden;
+                position: relative;
+                margin: 0.5em;
+                border-radius: 0.5em;
+                border: 1px solid #AAA;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .imges:before {
+                display: block;
+                content: '';
+                padding-top: 73%;
+            }
+        }
+    }
+
+    .btn {
+        text-align: center;
+        padding: 1em 0;
+
+        .primary-btn {
+            display: inline-block;
+            padding: 1em 2em;
+            font-size: 1.25em;
+            border-width: 3px;
+
+            span {
+                text-transform: uppercase;
+                padding-left: 0.5em;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+/* .site-section .primary-btn:hover {
+    background: #FFF;
+    color: blueviolet;
+    border-color: blueviolet;
+} */
+
+
+
+@media (max-width:724px) {
+    .site-section.home ul {
+        justify-content: center;
+    }
+    .site-section.home ul .site-section-inner {
+        flex: 0 0 362px;
+    }
+}
+
+@media (max-width:362px) {
+    .site-section.home ul .site-section-inner {
+        flex: 0 0 100%;
+    }
+    .btn{
+        width:100%;
+    }
+    .site-section.home .primary-btn {
+        display: block;
+    }
+}
