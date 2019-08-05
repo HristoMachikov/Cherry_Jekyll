@@ -1,0 +1,90 @@
+---
+layout: main
+title: Contacts
+permalink: /contacts/
+order: 3
+---
+
+<section class="contacts">
+    <div class="contact-header">
+        <h1>Контакти</h1>
+    </div>
+    <div class="contact-card">
+        <div class="card-img">
+            <img src="{{ site.baseurl }}/assets/card-img.jpg" alt="card-img">
+        </div>
+        <div class="card-name">
+            <p class="name">Христо Мачиков</p>
+        </div>
+        <ul class="contact-text">
+            <li>
+                <p class="phone">Телефон:<a href="tel:+359 888 002 063">+359 888 002 063</a></p>
+            </li>
+            <li>
+                <p class="email">E-mail:<a href="mailto:hristomachikov@gmail.com">hristomachikov@gmail.com</a></p>
+            </li>
+            <li>
+                <p class="address">1172, гр. София, ж.к. Дианабад, бл. 37</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contact-form">
+        <form action="GET">
+            <div class="title">
+                <h6>Изпратете запитване</h6>
+            </div>
+            <div class="name">
+                <p class="firstname">
+                    <label for="firstname">Име:<span>*</span></label>
+                    <input type="text" name="firstname" id="firstname">
+                    <span>Име</span>
+                </p>
+                <p class="lastname">
+                    <label for="lastname">Фамилия:<span>*</span></label>
+                    <input type="text" name="lastname" id="lastname">
+                    <span>Фамилия</span>
+                </p>
+            </div>
+            <p class="email">
+                <label for="email">E-mail:<span>*</span></label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p class="theme">
+                <label for="theme">Тема:<span>*</span></label>
+                <input type="text" name="theme" id="theme">
+            </p>
+            <p class="message">
+                <label for="message">Съобщение:<span>*</span></label>
+                <textarea name="message" id="message" rows="5"></textarea>
+            </p>
+            <div class="form-btn">
+                <p class="btn">
+                    <a class="primary-btn" href="{{ site.baseurl }}">Изпрати</a>
+                </p>
+                <p class="btn">
+                    <a class="primary-btn" href="{{ site.baseurl }}/contacts/">Изчисти</a>
+                </p>
+            </div>
+            
+        </form>
+    </div>
+
+    <div class="location">
+        <p class="location-text">Местоположение на овощната градина:</p>
+        <div class="iframe">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56129.40312896641!2d22.724569926384948!3d42.32251329362624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aa99bdb764e7ef%3A0xa00a014cd0e6ef0!2zMjU0MCDQmtC-0L3Rj9Cy0L4!5e0!3m2!1sbg!2sbg!4v1565009839311!5m2!1sbg!2sbg" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- <ul>
+        {% for page in site.pages %}
+        {% if page.title %}
+        <li>
+            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul> -->
+</section>
+
