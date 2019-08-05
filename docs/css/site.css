@@ -14,6 +14,7 @@
   --color-body-bgrd: #FFF;
   --color-body-text: #000;
   --color-link-defaut: #A00;
+  --color-link-hover: #777;
   --color-border-defaut: #999;
   --color-border-ligth: #CCC;
   --spacing-layout-elements:2em; }
@@ -426,6 +427,9 @@ blockquote .author:before {
   justify-items: end;
   position: relative; }
 
+.main-form .main-form-fieldsed .password.last {
+  padding-bottom: 0; }
+
 .main-form fieldset p.username {
   margin-top: 3rem; }
 
@@ -460,6 +464,8 @@ blockquote .author:before {
   display: block;
   margin: 1rem auto;
   padding: 0.5em 2em;
+  background: var(--color-primary-site);
+  border-radius: 10px;
   /* font-weight: bold; */ }
 
 .main-form .username span:before, .main-form .password span:before {
@@ -491,6 +497,13 @@ blockquote .author:before {
   border: 1px solid var(--color-primary-site);
   border-left: none;
   outline: none; }
+
+.main-form .question {
+  text-align: center;
+  padding: 0; }
+
+.main-form .question a:hover {
+  color: var(--color-link-hover); }
 
 .site-header .menu:before {
   transition: transform 0.5s ease-in; }
