@@ -1,5 +1,5 @@
 ---
-layout: next
+layout: main
 title:  "Welcome to CSS Advanced! Hello!"
 date:   2019-07-10 13:28:33 +0300
 categories: jekyll new
