@@ -11,9 +11,9 @@ image:
     aspectratio:
 ---
 
-{% if page.author %}
+
     <img src="{{ site.baseurl }}{{ page.image.directory }}{{ page.image.name }}{{ page.image.extention }}" alt="{{ page.image.name }}" width="320">
-{% endif %}
+
 
 # Hello!
 ## Hello there!!!
