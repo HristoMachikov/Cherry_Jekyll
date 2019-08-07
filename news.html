@@ -5,25 +5,10 @@ permalink: /news/
 order: 2
 ---
 <ul class="site-news">
-    {% for post in site.posts %}
-    {% if post.title %}
-    <li>
-        <div class="post-title">
-            <h2>{{ post.title }}</h2>
-        </div>
-        <div class="post-image">
-            <img src="{{ site.baseurl }}{{ post.image.directory }}{{ post.image.name }}{{ post.image.extention }}" alt="{{ post.image.name }}">
-        </div>
-        <div class="post-content">
-            <p>{{ post.content | markdownify }}</p>
-        </div>
-        <div class="post-creation">
-            <p class="post-author">{{ post.author }}</p>
-            <p class="post-date">{{ post.date | date_to_string }}</p>
-        </div>
-        <div class="post-btn">
-            <a class="primary-btn" href="{{ site.baseurl }}{{ post.url }}">Прочети</a>
-        </div>
+    {% for page in site.posts %}
+    {% if page.title %}
+    <li class="single-post">
+        {% include single-post.html %}
     </li>
     {% endif %}
     {% endfor %}

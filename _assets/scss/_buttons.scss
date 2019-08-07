@@ -13,3 +13,39 @@
         cursor: pointer;
     }
 }
+
+.link-btn {
+    outline: none;
+   
+    &:hover, &:focus {
+        color: var(--color-primary-site);
+        cursor: pointer;
+    }
+}
+
+.angle-right {
+    &:after {
+        @include fap;
+        display: inline-block;
+        opacity: 0;
+        content: "\f101";
+        padding-left: 0.2em;
+    }
+
+    &:hover:after, &:focus:after {
+        opacity: 1;
+    }
+}
+.angle-left {
+     &:before {
+        @include fap;
+        display: inline-block;
+        opacity: 0;
+        content: "\f100";
+        padding-right: 0.2em;
+    }
+
+     &:hover:before, &:focus:before {
+        opacity: 1;
+     }
+}

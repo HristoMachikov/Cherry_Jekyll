@@ -1,0 +1,22 @@
+<header class="post-title">
+    <h2>{{ page.title }}</h2>
+</header>
+
+<main class="post-content-container">
+    {% if page.image %}
+    <div class="post-image{% if page.image.aspect-ratio %} {{ page.image.aspect-ratio }}{% endif %}">
+        <img class="img-content" src="{{ site.baseurl }}{{ page.image.directory }}{{ page.image.name }}{{ page.image.extention }}" alt="{{ page.image.name }}">
+    </div>
+    {% endif %}
+    <div class="post-content">
+        {{ page.content | markdownify }}
+    </div>
+</main>
+<div class="post-creation">
+    <p class="post-author">{{ page.author }}</p>
+    <p class="post-date">{{ page.date | date_to_string }}</p>
+</div>
+<div class="post-btn">
+    <a class="link-btn angle-left" href="{{ site.baseurl }}/news/">Виж всички</a>
+    <a class="link-btn angle-right" href="{{ site.baseurl }}{{ page.url }}">Прочети</a>
+</div>

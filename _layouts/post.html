@@ -18,9 +18,11 @@
 
         <main class="main-content">
             <div class="wrapper">
-                <section class="site-section{% if page.title %} {{ page.title | slugify }}{% endif %}">
-                    {{ content }}
-                </section>
+                <!-- <section class="site-section{% if page.title %} {{ page.title | slugify }}{% endif %}"> -->
+                    <article class="single-post">
+                            {% include single-post.html %}
+                    </article>
+                <!-- </section> -->
             </div>
         </main>
 

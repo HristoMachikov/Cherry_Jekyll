@@ -1,3 +1,30 @@
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin fap {
+    display: block;
+    content: '';
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+}
+
 @mixin mq($screenType) {
     @if $screenType == phone-small {
         @media (max-width: 512px) {

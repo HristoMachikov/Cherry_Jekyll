@@ -156,6 +156,38 @@ blockquote .author:before {
     border-color: var(--color-primary-site);
     cursor: pointer; }
 
+.link-btn {
+  outline: none; }
+  .link-btn:hover, .link-btn:focus {
+    color: var(--color-primary-site);
+    cursor: pointer; }
+
+.angle-right:after {
+  display: block;
+  content: '';
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 700;
+  display: inline-block;
+  opacity: 0;
+  content: "\f101";
+  padding-left: 0.2em; }
+
+.angle-right:hover:after, .angle-right:focus:after {
+  opacity: 1; }
+
+.angle-left:before {
+  display: block;
+  content: '';
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 700;
+  display: inline-block;
+  opacity: 0;
+  content: "\f100";
+  padding-right: 0.2em; }
+
+.angle-left:hover:before, .angle-left:focus:before {
+  opacity: 1; }
+
 .site-header .image {
   display: block;
   width: 65px;
@@ -297,6 +329,142 @@ blockquote .author:before {
     color: var(--color-primary-core-site);
     border-color: var(--color-primary-site); } }
 
+.single-post {
+  margin-bottom: 0.5em; }
+  .single-post .post-content-container .post-image {
+    margin: 1%;
+    flex-basis: 49%; }
+    .single-post .post-content-container .post-image.ar-1x1 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-1x1:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 100%; }
+      .single-post .post-content-container .post-image.ar-1x1 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-16x9 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-16x9:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 56.25%; }
+      .single-post .post-content-container .post-image.ar-16x9 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-16x10 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-16x10:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 62.5%; }
+      .single-post .post-content-container .post-image.ar-16x10 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-9x16 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-9x16:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 177.77778%; }
+      .single-post .post-content-container .post-image.ar-9x16 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-3x2 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-3x2:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 66.66667%; }
+      .single-post .post-content-container .post-image.ar-3x2 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-2x3 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-2x3:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 150%; }
+      .single-post .post-content-container .post-image.ar-2x3 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-4x3 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-4x3:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 75%; }
+      .single-post .post-content-container .post-image.ar-4x3 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .single-post .post-content-container .post-image.ar-3x4 {
+      position: relative;
+      overflow: hidden; }
+      .single-post .post-content-container .post-image.ar-3x4:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 133.33333%; }
+      .single-post .post-content-container .post-image.ar-3x4 > .img-content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+  .single-post .post-creation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .single-post .post-btn {
+    text-align: center; }
+    .single-post .post-btn .angle-right {
+      display: none; }
+    .single-post .post-btn .link-btn {
+      margin: 0 1em; }
+
 /* .site-section.login, .site-section.registration, .site-section.about, .site-section.pages {
     padding: 5em 0 10em 0;
 } */
@@ -377,6 +545,25 @@ blockquote .author:before {
     width: 100%; }
   .site-section.home .primary-btn {
     display: block; } }
+
+.site-news {
+  list-style: none outside;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 0.5em;
+  padding: 0; }
+  .site-news .single-post:not(:last-child) {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--color-border-ligth); }
+  .site-news .single-post .post-content {
+    height: 3em;
+    overflow: hidden; }
+  .site-news .single-post .post-btn .link-btn {
+    margin: 0 1em; }
+  .site-news .single-post .post-btn .angle-right {
+    display: inline-block; }
+  .site-news .single-post .post-btn .angle-left {
+    display: none; }
 
 .contacts {
   display: flex;
