@@ -57,8 +57,30 @@
             text-align: left;
             padding: 0;
 
-            li p{
-                padding-bottom: 1em;
+            li {
+                p {
+                    padding-bottom: 1em;
+                    // display: inline-block;
+
+                    &:before {
+                        @include fap;
+                        display: inline-block;
+                        padding-right: 0.5em;
+                    }
+                }
+                
+                &:nth-child(1) p:before {
+                    content: "\f095";
+                }
+                &:nth-child(2) p:before {
+                    content: "\f0e0";
+                }
+                &:nth-child(3) p:before {
+                    content: "\f2bb"; 
+                }
+
+               
+                
             }
 
             a {

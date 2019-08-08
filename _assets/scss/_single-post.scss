@@ -1,24 +1,23 @@
 .single-post {
-    // text-align: center;
-    margin-bottom: 0.5em;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
 
     .post-title{
-      
+        text-align: center;
+        color: var(--color-primary-site);
     }
     .post-content-container {
-    
         @include mq(tablet){
-            
+            width: 100%;
+            height: auto;
         }
         .post-image {
-            margin: 1%;
-         
+            padding-bottom: 0.5em;
+            
+            @include mq(tablet){
+                grid-area: img;
+                max-width: 60%;
+                margin:0 auto;
+            }
     
-            flex-basis: 49%;
-            // margin-bottom: 0.3em;
             &.ar-1x1 {
                 @include aspect-ratio(1,1);
             }
@@ -46,11 +45,16 @@
         }
 
         .post-content {
-       
+            @include mq(tablet){
+                grid-area: txt;
+            }
+            p {
+                padding-bottom: 0.5em;
+            }
         }
     }
     .post-creation {
-        
+        color: var(--color-border-defaut);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;

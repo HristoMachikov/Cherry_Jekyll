@@ -1,15 +1,26 @@
 ---
 layout: main
 title: News
+title-bg: Новини
 permalink: /news/
 order: 2
 ---
 <ul class="site-news">
     {% for page in site.posts %}
-    {% if page.title %}
+    {% if page.title-bg %}
     <li class="single-post">
         {% include single-post.html %}
     </li>
     {% endif %}
     {% endfor %}
 </ul>
+<!-- {% for category in site.categories %}
+    <h2>{{ category[0] }}</h2>
+    <ul>
+        {% for post in category[1] %}
+            {% if post.title-bg %} 
+                <li><a href="{{ post.url }}">{{ post.title-bg }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endfor %} -->

@@ -33,39 +33,45 @@
         top: -2em;
         left: 0;
     }
-    .username {
-        display: flex;
-        align-items: center;
-        margin-top: 1rem;
-        justify-items: end;
-        position: relative;
-    }
-    .password {
+
+    .form-field {
         display: flex;
         align-items: center;
         margin-top: 1rem;
         justify-items: end;
         position: relative;
 
-        &.last {
-            padding-bottom: 0;
-        }
-
-        span:before{
+        span:before {
             @include fap;
-            content: '\f084';
             color: black;
         }
     }
+
     .username {
         margin-top: 3rem;
 
-        span:before{
-            @include fap;
+        span:before {
             content: '\f007';
-            color: black;
         }
     }
+
+    .password {
+        span:before {
+            content: '\f084';
+        }
+    }
+
+    .email {
+        span:before {
+            content: '\f0e0';
+        }
+    }
+
+    .last {
+        padding-bottom: 0;
+    }
+
+   
     .form-input {
         padding: 0.5em;
         border-radius: 0.3rem;
@@ -93,12 +99,12 @@
         padding: 0;
 
         a:hover{
-            color:var(--color-link-hover);
+            color: var(--color-link-hover);
         }
     }
 }
 
-.main-form .username span:before, .main-form .password span:before {
+.main-form .form-field span:before {
     background-color: var(--color-body-bgrd);
     border: 1px solid var(--color-border-ligth);
     display: flex;
@@ -110,24 +116,22 @@
     outline: none;
 }
 
-.main-form .username span, .main-form .password span {
+.main-form .form-field span {
     order: 1;
 }
 
-.main-form .username input, .main-form .password input {
+.main-form .form-field input {
     order: 2;
 }
 
-.main-form .username input:focus + span:before, .main-form .username input:hover + span:before,
-.main-form .password input:focus + span:before, .main-form .password input:hover + span:before {
+.main-form .form-field input:focus + span:before, .main-form .form-field input:hover + span:before {
     border: 1px solid var(--color-primary-site);
     color: var(--color-primary-site);
     border-right: none;
     outline: none;
 }               
 
-.main-form .username input:focus, .main-form .username input:hover,
-.main-form .password input:focus, .main-form .password input:hover {
+.main-form .form-field input:focus, .main-form .form-field input:hover {
     border: 1px solid var(--color-primary-site);
     border-left: none;
     outline: none;

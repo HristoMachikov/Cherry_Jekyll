@@ -1,28 +1,29 @@
 ---
 layout: main
 title: Login
+title-bg: Вход
 permalink: /login/
 order: 5
 ---
 
 <form action="#" class="main-form">
     <fieldset class="main-form-fieldsed">
-        <legend>Login</legend>
-        <p class="username">
-            <label for="username">Username</label>
+        <legend>Вход</legend>
+        <p class="form-field username">
+            <label for="username">Име</label>
             <input class="form-input" type="text" name="username" id="username">
             <span></span>
         </p>
-        <p class="password last">
-            <label for="password">Password</label>
+        <p class="form-field password last">
+            <label for="password">Парола</label>
             <input class="form-input" type="password" name="password" id="password">
             <span></span>
         </p>
         <p class="form-btn">
-            <a class="primary-btn" href="{{ site.baseurl }}">Login</a>
+            <a class="primary-btn" href="{{ site.baseurl }}">Вход</a>
             <!-- <input class="primary-btn" type="submit" value="Login"> -->
         </p>
         
-        <p class="question">Did you have <a href="{{ site.baseurl }}/registration/">Registration</a>?</p>
+        <p class="question">Имаш ли <a href="{{ site.baseurl }}/registration/">Регистрация</a>?</p>
     </fieldset>
 </form>
