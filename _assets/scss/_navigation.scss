@@ -20,15 +20,15 @@
     text-transform: uppercase;
     padding: 0.5em 1em;
     border-radius: 0.5em; 
-    /* outline: none; */
+    outline: none; 
     border: 1px solid var(--color-main-site);
     outline: none;
 }
 
 .site-navigation ul li a:hover {
     border-color: var(--color-primary-site);
-      
-        
+    // border-radius: 0.5em; 
+    // padding: 0.5em 1em; 
 }
 
 .site-navigation ul li a.selected {

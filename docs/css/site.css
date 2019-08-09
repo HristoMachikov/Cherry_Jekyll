@@ -279,7 +279,7 @@ blockquote .author:before {
   text-transform: uppercase;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  /* outline: none; */
+  outline: none;
   border: 1px solid var(--color-main-site);
   outline: none; }
 
@@ -491,23 +491,35 @@ blockquote .author:before {
   background: #FFF;
   position: fixed;
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 5em;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  text-align: center;
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  display: none; }
+  justify-content: center; }
   .site-section.home .side-fixed li {
     display: flex;
-    flex-grow: 1 1 auto;
-    border: 1px solid #EEE; }
+    border: 1px solid var(--color-border-ligt); }
     .site-section.home .side-fixed li a {
-      padding: 0.5em 1em; }
+      width: 100%;
+      padding: 0.5em;
+      color: var(--color-primary-site); }
+      .site-section.home .side-fixed li a:before {
+        display: block;
+        content: '';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 700;
+        display: inline-block; }
+    .site-section.home .side-fixed li:nth-child(1) a:before {
+      content: "\f0a5"; }
+    .site-section.home .side-fixed li:nth-child(2) a:before {
+      content: "\f129"; }
+    .site-section.home .side-fixed li:nth-child(3) a:before {
+      content: "\f128"; }
+    .site-section.home .side-fixed li:nth-child(4) a:before {
+      content: "\f07a"; }
 
 .site-section.home ul.sorts {
   display: flex;
