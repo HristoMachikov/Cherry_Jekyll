@@ -5,7 +5,7 @@
 
 <body>
     <div class="main">
-
+        
         <header class="main-header">
             <div class="wrapper">
                 <input type="checkbox" name="toggle" id="toggle" class="toggle-nav">
@@ -20,6 +20,9 @@
             <div class="wrapper">
                 <section class="site-section{% if page.title %} {{ page.title | slugify }}{% endif %}">
                     {{ content }}
+                    {% if page.title == "About" %}
+                        {% include carousel.html %}
+                    {% endif %}
                 </section>
             </div>
         </main>
@@ -28,5 +31,5 @@
         
     </div>
 </body>
-
+<script src="{{ site.baseurl }}/scripts/carousel.js"></script>
 </html>

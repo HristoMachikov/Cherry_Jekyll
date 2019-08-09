@@ -3,13 +3,42 @@
     padding: 5em 0 10em 0;
 } */
 
-.site-section.contacts ul {
-    display: block;
-    list-style-type: disc;
-}
-
+// .site-section.contacts ul {
+//     display: block;
+//     list-style-type: disc;
+// }
+//    60px + 0.5 * var(--spacing-layout-elements);
 .site-section.home {
-    ul {
+    .side-fixed {
+       
+        background:  #FFF;
+        position: fixed;
+        display: inline-block;
+       left: 50%;
+       transform: translateX(-50%);
+       top:5em;
+    
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        z-index: 10;
+
+        display: none;
+        li {
+            display: flex;
+            flex-grow: 1 1 auto;
+            border: 1px solid #EEE;
+            a {
+                padding: 0.5em 1em;
+
+            }
+        }
+    }
+    ul.sorts {
         display: flex;
         list-style: none;
         justify-content: space-between;
@@ -19,7 +48,7 @@
         .site-section-inner {
             display: flex;
             flex-direction: column;
-            flex-basis: 300px;
+            flex-basis: 100%;
             /* align-items: center; */
             justify-content: stretch;
             text-align: center;
@@ -36,6 +65,13 @@
             .description {
                 padding-bottom: 1em;
             }
+            @include mq(phone){
+                flex: 0 0 400px;
+            }
+
+            // @include mq(tablet){
+            //     flex: 0 0 400px;
+            // }
 
             .imges {
                 display: block;
@@ -69,10 +105,14 @@
         padding: 1em 0;
 
         .primary-btn {
-            display: inline-block;
+            display: block;
             padding: 1em 2em;
             font-size: 1.25em;
             border-width: 3px;
+
+            @include mq(phone){
+                display: inline-block;
+            }
 
             span {
                 text-transform: uppercase;
@@ -80,27 +120,5 @@
                 font-weight: bold;
             }
         }
-    }
-}
-
-
-@media (max-width:724px) {
-    .site-section.home ul {
-        justify-content: center;
-    }
-    .site-section.home ul .site-section-inner {
-        flex: 0 0 362px;
-    }
-}
-
-@media (max-width:362px) {
-    .site-section.home ul .site-section-inner {
-        flex: 0 0 100%;
-    }
-    .btn{
-        width:100%;
-    }
-    .site-section.home .primary-btn {
-        display: block;
     }
 }
