@@ -4,14 +4,14 @@
     margin: 0 auto;
     position: relative;
 
-    fieldset {
+    .main-form-fieldsed {
         padding: 1rem;
         background: #EEE;
         border: 1px solid var(--color-border-defaut);
         border-radius: 0.5em;
         
 
-        legend {
+        .main-form-legent {
             padding: 0.5rem 2.5rem;
             position: absolute;
             top: 0;
@@ -102,37 +102,54 @@
             color: var(--color-link-hover);
         }
     }
-}
 
-.main-form .form-field span:before {
-    background-color: var(--color-body-bgrd);
-    border: 1px solid var(--color-border-ligth);
-    display: flex;
-    align-items: center;
-    padding: 0.5em;
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border-right: none;
-    outline: none;
-}
+    .form-field {
 
-.main-form .form-field span {
-    order: 1;
-}
+        span {
+            order: 1;
 
-.main-form .form-field input {
-    order: 2;
-}
+            &:before {
+            background-color: var(--color-body-bgrd);
+            border: 1px solid var(--color-border-ligth);
+            display: flex;
+            align-items: center;
+            padding: 0.5em;
+            border-top-left-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+            border-right: none;
+            outline: none;
+            }
+        }
 
-.main-form .form-field input:focus + span:before, .main-form .form-field input:hover + span:before {
-    border: 1px solid var(--color-primary-site);
-    color: var(--color-primary-site);
-    border-right: none;
-    outline: none;
-}               
+        input {
+            order: 2;
 
-.main-form .form-field input:focus, .main-form .form-field input:hover {
-    border: 1px solid var(--color-primary-site);
-    border-left: none;
-    outline: none;
+            &:hover {
+                border: 1px solid var(--color-primary-site);
+                border-left: none;
+                outline: none;
+            }
+
+            &:hover + span:before {
+                border: 1px solid var(--color-primary-site);
+                color: var(--color-primary-site);
+                border-right: none;
+                outline: none;
+            }  
+
+            &:focus {
+                border: 1px solid var(--color-primary-site);
+                border-left: none;
+                outline: none;
+            }
+
+            &:focus + span:before {
+                border: 1px solid var(--color-primary-site);
+                color: var(--color-primary-site);
+                border-right: none;
+                outline: none;
+            }                      
+        }
+
+    }
 }

@@ -1,5 +1,5 @@
 .site-header {
-    & .image {
+    .image {
         display: block;
         width: 65px;
         height: 60px;
@@ -8,13 +8,13 @@
         border-radius: 0.3em;
     }
 
-    & .image img:before {
+    .image img:before {
         display: block;
         content: '';
         padding-top: 66.67%;
     }
 
-    & .image img {
+    .image img {
         width: 200%;
         height: auto;
         display: block;
@@ -25,11 +25,11 @@
         z-index: 1;
     }
 
-    & .site-logo {
+    .site-logo {
         position: relative;
     }
 
-    & .text {
+    .text {
         font-family: 'PT Sans Narrow', Arial, sans-serif;
         font-size: 18px;
         color: var(--color-primary-site);
@@ -41,7 +41,7 @@
         pointer-events: none;
     }
 
-    & .toggle-nav-btn {
+    .toggle-nav-btn {
         display: inline-block;
         text-align: right;
         margin-left: auto;
@@ -50,7 +50,7 @@
             display: none;
         }
 
-        & .menu:before {
+        .menu:before {
             display: inline-block;
             content: '\f0c9';
             font-family: "Font Awesome 5 Pro";

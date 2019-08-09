@@ -77,6 +77,9 @@
         text-align: center;
         margin: 0.25em 0;
     }
+    .toggle-nav:checked+.site-header .toggle-nav-btn .menu:before {
+        content: "\f00d";
+    }
     .site-navigation ul li a {
         display: block;
         background: var(--color-primary-core-site);

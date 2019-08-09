@@ -1,3 +1,4 @@
+/* navigation */
 .site-header .menu:before {
     transition: transform 0.5s ease-in;
 }
@@ -17,14 +18,7 @@
         }
     }
 }
-/*
-.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(1) {
-    animation-delay: 0.1s;
-}
-.toggle-nav:checked+.site-header .site-navigation ul li:nth-child(2) {
-    animation-delay: 0.2s;
-}
-*/
+
 @keyframes slidIn {
     from {
         transform: translateX(-1em);
