@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700&display=swap&subset=cyrillic");
 :root {
   --font-size-phone-small: 12px;
@@ -7,7 +8,7 @@
   --font-size-desktop: 21px;
   --font-size-desktop-large: 24px;
   --font-size-desktop-huge: 27px;
-  --layout-main-width: 50em;
+  --layout-main-width: 60em;
   --color-main-site: greenyellow;
   --color-primary-site: blueviolet;
   --color-primary-core-site: #FFF;
@@ -513,7 +514,7 @@ blockquote .author:before {
   position: fixed;
   left: 97%;
   transform: translate(-50%, -50%);
-  top: 40%; }
+  top: 50%; }
   .site-section.home .home-sidenav ul {
     display: inline-block;
     text-align: center;
@@ -545,6 +546,8 @@ blockquote .author:before {
       content: "\f128"; }
     .site-section.home .home-sidenav li:nth-child(4) a:before {
       content: "\f07a"; }
+    .site-section.home .home-sidenav li:nth-child(5) a:before {
+      content: "\f0ce"; }
 
 .site-section.home .sorts header span:after {
   content: "\f0a5"; }
@@ -652,6 +655,109 @@ blockquote .author:before {
       text-transform: uppercase;
       padding-left: 0.5em;
       font-weight: bold; }
+
+.site-section.home .schedule header span:after {
+  content: "\f0ce"; }
+
+.site-section.home .schedule .main-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--color-primary-site);
+  border-bottom: none;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10; }
+  @media (max-width: 512px) {
+    .site-section.home .schedule .main-table {
+      display: block;
+      border: none; } }
+  .site-section.home .schedule .main-table thead {
+    background: var(--color-primary-site);
+    color: var(--color-primary-core-site);
+    flex-basis: 100%; }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table thead {
+        display: block; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; } }
+  .site-section.home .schedule .main-table tbody {
+    flex-basis: 100%; }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table tbody {
+        display: block; } }
+    .site-section.home .schedule .main-table tbody tr:nth-child(even) {
+      background: #EEE; }
+  .site-section.home .schedule .main-table tr {
+    text-align: center;
+    display: flex; }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table tr {
+        display: block;
+        border: 1px solid var(--color-border-ligth); } }
+  .site-section.home .schedule .main-table th {
+    border-bottom: 1px solid var(--color-primary-site); }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table th {
+        display: block; } }
+    .site-section.home .schedule .main-table th:nth-child(1) {
+      flex: 0 0 10%; }
+    .site-section.home .schedule .main-table th:nth-child(2) {
+      flex: 0 0 30%; }
+    .site-section.home .schedule .main-table th:nth-child(3) {
+      flex: 0 0 10%; }
+    .site-section.home .schedule .main-table th:nth-child(4) {
+      flex: 0 0 35%; }
+    .site-section.home .schedule .main-table th:nth-child(5) {
+      flex: 0 0 15%; }
+  .site-section.home .schedule .main-table td {
+    border-bottom: 1px solid var(--color-primary-site); }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td {
+        text-align: left;
+        display: block;
+        border: none;
+        border-bottom: 1px solid var(--color-border-ligth);
+        position: relative;
+        padding-left: 34%; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td:before {
+        display: block;
+        text-align: left;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2%;
+        width: 30%;
+        white-space: nowrap;
+        font-weight: bold; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td:nth-of-type(1):before {
+        content: "Номер"; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td:nth-of-type(2):before {
+        content: "Име"; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td:nth-of-type(3):before {
+        content: "Kg"; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td:nth-of-type(4):before {
+        content: "Забележки"; } }
+    @media (max-width: 512px) {
+      .site-section.home .schedule .main-table td:nth-of-type(5):before {
+        content: "Доставка"; } }
+    .site-section.home .schedule .main-table td:nth-child(1) {
+      flex: 0 0 10%; }
+    .site-section.home .schedule .main-table td:nth-child(2) {
+      flex: 0 0 30%; }
+    .site-section.home .schedule .main-table td:nth-child(3) {
+      flex: 0 0 10%; }
+    .site-section.home .schedule .main-table td:nth-child(4) {
+      flex: 0 0 35%; }
+    .site-section.home .schedule .main-table td:nth-child(5) {
+      flex: 0 0 15%; }
 
 .site-news {
   list-style: none outside;

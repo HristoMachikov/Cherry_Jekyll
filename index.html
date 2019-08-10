@@ -3,28 +3,21 @@ layout: main
 title: Home
 permalink: /
 topics:
-    - topic:
-        name: Сортове
-        ref: sorts
-    - topic:
-        name: Инфо
-        ref: info
-    - topic:
-        name: Защо
-        ref: why
-    - topic:
-        name: Поръчай
-        ref: order
+    - id: sorts
+    - id: info
+    - id: why
+    - id: order
+    - id: schedule
 ---
 <aside class="home-sidenav">
     <ul>
         {% for item in page.topics %}
-            <li><a href="{{ site.baseurl }}{{ page.url }}#{{ item.topic.ref }}"></a></li>
+            <li><a href="{{ site.baseurl }}{{ page.url }}#{{ item.id }}"></a></li>
         {% endfor %}
     </ul>
 </aside>
 
-<article class="sorts" id="{{ page.topics[0].topic.ref }}">
+<article class="sorts" id="{{ page.topics[0].id }}">
     <header>
         <h2>Предлагани сортове</h2><span></span>
     </header>
@@ -54,7 +47,7 @@ topics:
     </ul>
 </article>
 
-<article class="info" id="{{ page.topics[1].topic.ref }}">
+<article class="info" id="{{ page.topics[1].id }}">
     <header> 
         <h2>Важна информация</h2><span></span>
     </header>
@@ -66,7 +59,7 @@ topics:
     <p>Един ден преди доставката ще ви се обадим, за уточняване на мястото и часа на доставката.</p>
 </article>
 
-<article class="why" id="{{ page.topics[2].topic.ref }}">
+<article class="why" id="{{ page.topics[2].id }}">
     <header>
         <h2>Защо тези череши</h2><span></span>
     </header>
@@ -82,7 +75,7 @@ topics:
     </ul>
 </article>
 
-<article class="order" id="{{ page.topics[3].topic.ref }}">
+<article class="order" id="{{ page.topics[3].id }}">
     <header>
         <h2>Поръчай</h2><span></span>
     </header>
@@ -90,4 +83,86 @@ topics:
     <p class="btn">
         <a class="primary-btn" href="#">Запази череши за<span>Юни 2020</span></a>
     </p>
+</article>
+
+<article class="schedule" id="{{ page.topics[4].id }}">
+    <header>
+        <h2>Списък</h2><span></span>
+    </header>
+    <table class="main-table">
+        <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Име</th>
+                <th>Kg</th>
+                <th>Забележки</th>
+                <th>Доставка</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Калоян Тодоров</td>
+                <td>8 kg</td>
+                <td>червени</td>
+                <td>1-ви ден</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Vasileva Mo</td>
+                <td>6 kg</td>
+                <td>червени</td>
+                <td>1-ви ден</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Русеви</td>
+                <td>16 kg</td>
+                <td>8кг - червени, 8кг - розови</td>
+                <td>1-ви ден</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Росен</td>
+                <td>10 kg</td>
+                <td>червени</td>
+                <td>1-ви ден</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Татяна Иванова</td>
+                <td>10 kg</td>
+                <td>червени</td>
+                <td>1-ви ден</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Димитър Чанев</td>
+                <td>12 kg</td>
+                <td>червени</td>
+                <td>1-ви ден</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Боян</td>
+                <td>10 kg</td>
+                <td>червени</td>
+                <td>2-ри ден</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Иван Досев</td>
+                <td>100 kg</td>
+                <td>5x8kg, 6x10kg червени</td>
+                <td>2-ри ден</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Офис</td>
+                <td>10 kg</td>
+                <td>червени</td>
+                <td>2-ри ден</td>
+            </tr>
+        </tbody>
+    </table>
 </article>

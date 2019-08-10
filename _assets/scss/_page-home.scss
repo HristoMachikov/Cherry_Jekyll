@@ -40,7 +40,7 @@
         position: fixed;
         left: 97%;
         transform: translate(-50%, -50%);
-        top: 40%;
+        top: 50%;
     
         ul {
             display: inline-block;
@@ -81,6 +81,9 @@
             }
             &:nth-child(4) a:before {
                 content: "\f07a";
+            }
+            &:nth-child(5) a:before {
+                content: "\f0ce";
             }
         }
     }
@@ -231,5 +234,125 @@
             }
         }
     }
-}
 
+    .schedule {
+        header{
+            span:after {
+                content: "\f0ce";
+            }
+        }
+        .main-table{
+            @include mq(phone-small) {
+                display: block;
+                border: none;
+            }
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--color-primary-site);
+            border-bottom: none;
+            display: flex;
+            flex-wrap: wrap;
+            z-index: 10;
+        
+            thead {
+                background: var(--color-primary-site);
+                color: var(--color-primary-core-site);
+                flex-basis: 100%;
+                @include mq(phone-small) {
+                    display: block;
+                }
+                tr {
+                    @include mq(phone-small) {
+                        position: absolute;
+                        top: -9999px;
+                        left: -9999px;
+                    } 
+                }
+            }
+            tbody {
+                flex-basis: 100%;
+                @include mq(phone-small) {
+                    display: block;
+                }
+                tr:nth-child(even) {
+                    background: #EEE;
+                }
+            }
+            tr { 
+                text-align: center;
+                display: flex;
+                @include mq(phone-small) {
+                    display: block;
+                    border: 1px solid var(--color-border-ligth);
+                }
+            }
+            th {
+                border-bottom: 1px solid var(--color-primary-site);
+                @include mq(phone-small) {
+                    display: block;
+                }
+                &:nth-child(1){
+                    flex:0 0 10%;
+                }
+                &:nth-child(2){
+                    flex:0 0 30%;
+                }
+                &:nth-child(3){
+                    flex:0 0 10%;
+                }
+                &:nth-child(4){
+                    flex:0 0 35%;
+                }
+                &:nth-child(5){
+                    flex:0 0 15%;
+                }
+            }
+            td {
+                border-bottom: 1px solid var(--color-primary-site);
+                @include mq(phone-small) {
+                    text-align: left;
+                    display: block;
+                    border: none;
+                    border-bottom: 1px solid var(--color-border-ligth);
+                    position: relative;
+                    padding-left: 34%;
+                }
+                &:before {
+                    @include mq(phone-small) {
+                        display: block;
+                        text-align: left;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 2%;
+                        width: 30%;
+                        white-space: nowrap;
+                        font-weight: bold;
+                    } 
+                }
+
+                &:nth-of-type(1):before {  @include mq(phone-small) { content: "Номер"; } }
+                &:nth-of-type(2):before {  @include mq(phone-small) { content: "Име"; } }
+                &:nth-of-type(3):before {  @include mq(phone-small) { content: "Kg"; } }
+                &:nth-of-type(4):before {  @include mq(phone-small) { content: "Забележки"; } }
+                &:nth-of-type(5):before {  @include mq(phone-small) { content: "Доставка"; } }
+
+                &:nth-child(1){
+                    flex:0 0 10%;
+                }
+                &:nth-child(2){
+                    flex:0 0 30%;
+                }
+                &:nth-child(3){
+                    flex:0 0 10%;
+                }
+                &:nth-child(4){
+                    flex:0 0 35%;
+                }
+                &:nth-child(5){
+                    flex:0 0 15%;
+                }
+            }
+        } 
+    }
+}
