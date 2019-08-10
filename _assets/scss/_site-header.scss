@@ -41,6 +41,27 @@
         pointer-events: none;
     }
 
+    // .toggle-nav {
+    //     &:checked+.site-header .site-navigation {
+    //         display: block;
+    //         flex-basis: 100%;
+    //         text-align: right;
+    //         position: absolute;
+    //         top: 100%;
+    //         left: 100%;
+    //         transform: translateX(calc(-100% - var(--spacing-layout-elements)));
+    //         z-index: 2;
+    //     }
+    //     &:checked+.site-header .site-navigation li {
+    //         text-align: center;
+    //         margin: 0.25em 0;
+    //     }
+    //     &:checked+.site-header .toggle-nav-btn .menu:before {
+    //         content: "\f00d";
+    //     }
+    // }
+    
+
     .toggle-nav-btn {
         display: inline-block;
         text-align: right;
